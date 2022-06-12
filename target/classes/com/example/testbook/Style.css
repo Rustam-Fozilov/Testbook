@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'test';
+    src: url('Fonts/Montserrat-SemiBold.ttf');
+}
+
+#homeIcon {
+    -fx-image: url("../../../images/home-icon.png");
+}
+
+#homeIcon:hover {
+    -fx-image: url("../../../images/hover-home-icon.png");
+}
+
+#aboutIcon {
+    -fx-image: url("../../../images/about-icon.png");
+}
+
+#aboutIcon:hover {
+    -fx-image: url("../../../images/hover-about-icon.png");
+}
+
+#settingsIcon {
+    -fx-image: url("../../../images/settings-icon.png");
+}
+
+#settingsIcon:hover {
+    -fx-image: url("../../../images/hover-settings-icon.png");
+}
+
+#dirLabel {
+    -fx-font-family: "Montserrat SemiBold";
+}
