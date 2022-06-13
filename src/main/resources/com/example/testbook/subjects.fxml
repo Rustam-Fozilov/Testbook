@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="fanlarPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #f3f3f3;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.testbook.SubjectsController">
+   <children>
+      <Text fx:id="title" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fanlar" AnchorPane.bottomAnchor="658.078125" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TilePane fx:id="tilePane" layoutX="30.0" layoutY="85.0" maxWidth="700.0" prefWidth="700.0" />
+      <VBox fx:id="infoVBox" layoutX="802.0" prefHeight="660.0" prefWidth="278.0" style="-fx-background-color: #fff; -fx-background-radius: 20px;" AnchorPane.leftAnchor="802.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <Text fx:id="fanlarTitle" strokeType="OUTSIDE" strokeWidth="0.0" text="Fanlar haqida ma'lumot" visible="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="infoText" strokeType="OUTSIDE" strokeWidth="0.0" text="Fanlardan birini tanlang">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Text>
+            <Button fx:id="startButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-border-color: #151515; -fx-border-radius: 12px;" text="Boshlash" visible="false">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

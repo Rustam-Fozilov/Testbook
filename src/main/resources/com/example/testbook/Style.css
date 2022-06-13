@@ -3,11 +3,11 @@
     src: url('Fonts/Montserrat-SemiBold.ttf');
 }
 
-#homeIcon {
-    -fx-image: url("../../../images/home-icon.png");
+#homeIcon:hover {
+    -fx-image: url("../../../images/hover-home-icon.png");
 }
 
-#homeIcon:hover {
+#homeIcon {
     -fx-image: url("../../../images/hover-home-icon.png");
 }
 
@@ -27,6 +27,16 @@
     -fx-image: url("../../../images/hover-settings-icon.png");
 }
 
-#dirLabel {
+#title {
     -fx-font-family: "Montserrat SemiBold";
+}
+
+#addTestButton {
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-font-size: 16px;
+}
+
+#Button1{
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-font-size: 16px;
 }
