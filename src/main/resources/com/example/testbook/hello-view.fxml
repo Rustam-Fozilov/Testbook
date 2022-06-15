@@ -13,7 +13,7 @@
    <left>
       <VBox fx:id="navbar" maxWidth="70.0" prefWidth="70.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="homeIcon" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="homeIcon" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#goToHome" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/hover-home-icon.png" />
                </image>
