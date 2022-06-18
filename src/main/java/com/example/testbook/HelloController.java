@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 
@@ -27,6 +28,16 @@ public class HelloController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         navbar.setAlignment(Pos.CENTER);
 
+        try {
+            Parent fxml = FXMLLoader.load(getClass().getResource("subjects.fxml"));
+            bgSubjectsPane.getChildren().removeAll();
+            bgSubjectsPane.getChildren().setAll(fxml);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void goToHome(MouseEvent mouseEvent) {
         try {
             Parent fxml = FXMLLoader.load(getClass().getResource("subjects.fxml"));
             bgSubjectsPane.getChildren().removeAll();

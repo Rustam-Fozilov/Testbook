@@ -13,7 +13,11 @@ create table subjects (
 );
 
 insert into subjects(Name, Test_amount, Duration)
-value ('HTML', 30, '00:50:00');
+values ('Java', 30, '00:30:00'),
+('Python', 50, '00:40:00'),
+('PHP', 20, '00:30:00'),
+('C++', 45, '01:00:00'),
+('SQL', 15, '00:15:00');
 
 drop table questions;
 
@@ -33,8 +37,18 @@ create table questions (
 truncate table questions;
 
 insert into questions(SubjectId, Question, variant1, variant2, variant3, correct_answer)
-value (8, 'html nima', 'zor', 'yomon', 'yaxwi', 'morkap til');
+value (8, 'html nima', 'bilmayman', 'dasturlash tili', 'vs code', 'morkap til'),
+	(8, 'br tegning vazifasi nima', 'rasm qoyish', 'button', 'text yozish', 'enter tashlash'),
+	(8, 'h1 tegning vazifasi nima', 'kodni korish', 'chiziq chizish', 'hech narsa', 'text yozish'),
+    (1, 'java nima', 'bilmayman', 'virtual mashina', 'intelliJ idea', 'dasturlash tili'),
+    (1, 'int qanday tipga kiradi', 'bilmayman', 'satr', 'kast', 'butun son'),
+    (1, 'JavaFX da nima yaratiladi', 'bilmayman', 'web app', 'mobile app', 'desktop app'),
+    (2, 'Pythonni kim yaratgan', 'bilmayman', 'stiv jobs', 'bill gates', 'Guido Rossum'),
+    (2, 'Python qanaqa til', 'bilmayman', 'yuqori', 'vs code', 'quyi'),
+    (2, 'Python ilon turimi', 'bilmayman', 'hammasi togri', 'yoq', 'ha');
 
+
+select count(*) from questions where SubjectId = 8;
 
 SELECT Variant1, Variant2, Variant3, Correct_answer FROM questions WHERE SubjectId = 8;
 
