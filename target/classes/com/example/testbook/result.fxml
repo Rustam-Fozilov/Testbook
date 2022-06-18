@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="resultPane" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.testbook.ResultController">
+   <children>
+      <VBox alignment="CENTER" layoutX="430.0" prefHeight="720.0">
+         <children>
+            <Label text="Sizning natijangiz">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="120.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="allQuestionsLabel" text="Jami savol: 50ta">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="corrAnswersLabel" text="To'g'ri javoblar: 90ta">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="percentLabel" text="Natija: 60%">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="120.0" />
+               </VBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#goToHome" prefHeight="50.0" prefWidth="160.0" style="-fx-background-color: #0066ff; -fx-background-radius: 12;" text="Asosiy menyu" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
