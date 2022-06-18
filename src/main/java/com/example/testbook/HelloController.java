@@ -19,9 +19,6 @@ public class HelloController implements Initializable {
     private VBox navbar;
 
     @FXML
-    private ImageView homeIcon;
-
-    @FXML
     private AnchorPane bgSubjectsPane;
 
     @Override
