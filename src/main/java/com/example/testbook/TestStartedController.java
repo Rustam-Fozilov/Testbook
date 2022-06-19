@@ -165,7 +165,10 @@ public class TestStartedController implements Initializable {
                     raqam++;
                     correctAnswers++;
                     System.out.println("tori");
+                } else {
+                    raqam++;
                 }
+
             }
 
             if (nowQuestion + 1 != questionsList.size()) {
