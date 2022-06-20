@@ -8,6 +8,8 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
@@ -35,10 +37,22 @@ public class SubjectsController implements Initializable {
     private Button startButton;
 
     @FXML
+    private ImageView settingsIcon;
+
+    @FXML
     private TilePane tilePane;
 
     @FXML
     private AnchorPane fanlarPane;
+
+    int id;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -120,6 +134,7 @@ public class SubjectsController implements Initializable {
                     );
                     fanlarTitle.setVisible(true);
                     startButton.setVisible(true);
+                    settingsIcon.setVisible(true);
 
                     startButton.setOnMouseClicked(mouseEvent2 -> {
                         try {
@@ -129,6 +144,22 @@ public class SubjectsController implements Initializable {
                             TestStartedController ts = loader.getController();
                             ts.setId(finalI1 + 1);
                             ts.test();
+
+                            fanlarPane.getChildren().removeAll();
+                            fanlarPane.getChildren().setAll(root);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    });
+
+                    settingsIcon.setOnMouseClicked(mouseEvent3 -> {
+                        try {
+                            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("custom-settings.fxml"));
+                            Parent root = loader.load();
+
+                            CustomSettingsController csc = loader.getController();
+                            csc.setId(finalI1 + 1);
+                            csc.showEditTable();
 
                             fanlarPane.getChildren().removeAll();
                             fanlarPane.getChildren().setAll(root);

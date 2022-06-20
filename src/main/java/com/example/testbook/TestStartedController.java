@@ -168,7 +168,6 @@ public class TestStartedController implements Initializable {
                 } else {
                     raqam++;
                 }
-
             }
 
             if (nowQuestion + 1 != questionsList.size()) {

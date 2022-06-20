@@ -72,4 +72,9 @@ public class Database {
     public ArrayList<QuestionInformation> getQuestionsInformation() {
         return questionsInformation;
     }
+
+    public static Connection getConnection() throws SQLException {
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/testbook", "root", "1234");
+        return conn;
+    }
 }
