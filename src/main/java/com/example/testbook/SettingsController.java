@@ -204,6 +204,19 @@ public class SettingsController {
     }
 
     public void addTest(MouseEvent mouseEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("add-test.fxml"));
+            Parent root = loader.load();
+
+            AddTestController atc = loader.getController();
+            atc.getSubjectId(this.getId());
+
+            settingsVbox.getChildren().removeAll();
+            settingsVbox.getChildren().setAll(root);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         deleteSubjectText.setStyle("-fx-fill: black");
         addTestText.setStyle("-fx-fill: #0066FF");
     }

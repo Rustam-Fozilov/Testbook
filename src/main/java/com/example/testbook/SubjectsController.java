@@ -65,11 +65,20 @@ public class SubjectsController implements Initializable {
                 "-fx-border-color: #151515;" +
                 "-fx-border-radius: 12px;" +
                 "-fx-cursor: hand;" +
-                "-fx-opacity: 0.5;" +
                 "-fx-font-family: System Regular;"
         );
         infoVBox.setAlignment(Pos.CENTER);
         infoVBox.setSpacing(230);
+
+        addTestButton.setOnMouseClicked(MouseEvent -> {
+            try {
+                Parent fxml = FXMLLoader.load(getClass().getResource("add-subject.fxml"));
+                fanlarPane.getChildren().removeAll();
+                fanlarPane.getChildren().setAll(fxml);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
 
         AtomicInteger count = new AtomicInteger();
         try {

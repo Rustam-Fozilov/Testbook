@@ -45,7 +45,6 @@ public class EditTestController {
     }
 
 
-
     public void setTextField(int qid, String question, String variant1, String variant2, String variant3, String correctAnswer) {
         questionField.setText(question);
         variant1Field.setText(variant1);

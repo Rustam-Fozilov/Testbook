@@ -54,13 +54,13 @@
                         <Image url="@../../../images/refresh-icon.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="30.0" right="230.0" />
+                        <Insets left="30.0" right="260.0" />
                      </HBox.margin>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </ImageView>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Yangi ma'lumotlarni kiriting">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Test ma'lumotlari">
                      <font>
                         <Font size="18.0" />
                      </font>
