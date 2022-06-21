@@ -24,17 +24,6 @@
                   <Insets bottom="25.0" />
                </VBox.margin>
             </ImageView>
-            <ImageView fx:id="settingsIcon" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/settings-icon.png" />
-               </image>
-               <VBox.margin>
-                  <Insets bottom="25.0" />
-               </VBox.margin>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#737373" height="1.0" stroke="#737373" strokeType="INSIDE" width="25.0">
                <VBox.margin>
                   <Insets bottom="25.0" />

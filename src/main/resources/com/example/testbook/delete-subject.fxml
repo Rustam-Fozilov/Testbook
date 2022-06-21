@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane fx:controller="com.example.testbook.DeleteSubjectController" prefHeight="600.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <CheckBox fx:id="confirmCheckbox" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Chindan ham shu fanni o'chirmoqchimisiz ?" textAlignment="RIGHT" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <Button layoutX="298.0" layoutY="78.0" mnemonicParsing="false" onAction="#deleteSubject" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: #FF0000; -fx-background-radius: 8;" text="o'chirish" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text fx:id="statusText" layoutX="264.0" layoutY="162.0" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: green;" text="Muvaffaqiyatli o'chirildi" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,15 +1,15 @@
 package com.example.testbook.Database;
 
 public class QuestionsTable {
-    int questionId;
-    String question;
-    String variant1;
-    String variant2;
-    String variant3;
-    String correctAnswers;
+    private int questionId;
+    private String question;
+    private String variant1;
+    private String variant2;
+    private String variant3;
+    private String correctAnswers;
 
-    public QuestionsTable(int subjectId, String question, String variant1, String variant2, String variant3, String correctAnswers) {
-        this.questionId = subjectId;
+    public QuestionsTable(int questionId, String question, String variant1, String variant2, String variant3, String correctAnswers) {
+        this.questionId = questionId;
         this.question = question;
         this.variant1 = variant1;
         this.variant2 = variant2;

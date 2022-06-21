@@ -9,7 +9,6 @@ import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
@@ -154,10 +153,10 @@ public class SubjectsController implements Initializable {
 
                     settingsIcon.setOnMouseClicked(mouseEvent3 -> {
                         try {
-                            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("custom-settings.fxml"));
+                            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("settings.fxml"));
                             Parent root = loader.load();
 
-                            CustomSettingsController csc = loader.getController();
+                            SettingsController csc = loader.getController();
                             csc.setId(finalI1 + 1);
                             csc.showEditTable();
 
