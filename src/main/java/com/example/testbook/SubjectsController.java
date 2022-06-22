@@ -105,6 +105,7 @@ public class SubjectsController implements Initializable {
                 finalI = i;
                 int finalI1 = finalI;
                 int finalI2 = i;
+                int finalI3 = i;
                 tilePane.getChildren().get(i).setOnMouseClicked(mouseEvent -> {
                     startButton.setStyle(
                             "-fx-pref-width: 160px;" +
@@ -125,7 +126,7 @@ public class SubjectsController implements Initializable {
 
 
                         ps = conn.prepareStatement("SELECT count(*) FROM questions WHERE SubjectId = ?");
-                        ps.setInt(1, finalI2 + 1);
+                        ps.setInt(1, subjectsInformation.get(finalI2).getSubjectId());
                         ResultSet rs = ps.executeQuery();
 
                         while (rs.next()) {
@@ -150,7 +151,7 @@ public class SubjectsController implements Initializable {
                             Parent root = loader.load();
 
                             TestStartedController ts = loader.getController();
-                            ts.setId(finalI1 + 1);
+                            ts.setId(subjectsInformation.get(finalI2).getSubjectId());
                             ts.test();
 
                             fanlarPane.getChildren().removeAll();
@@ -166,7 +167,7 @@ public class SubjectsController implements Initializable {
                             Parent root = loader.load();
 
                             SettingsController csc = loader.getController();
-                            csc.setId(finalI1 + 1);
+                            csc.setId(subjectsInformation.get(finalI2).getSubjectId());
                             csc.showEditTable();
 
                             fanlarPane.getChildren().removeAll();

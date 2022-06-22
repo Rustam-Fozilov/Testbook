@@ -62,7 +62,7 @@ public class TestStartedController implements Initializable {
         return id;
     }
 
-    private int nowQuestion = 0, raqam = 0, variantsIndex = 0, correctAnswers;
+    private int nowQuestion = 0, raqam = 0, questionNumber = 1, variantsIndex = 0, correctAnswers;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -155,8 +155,10 @@ public class TestStartedController implements Initializable {
         variant4.setText(variantsList.get(list.get(3)));
 
 
+        int finalCount = count;
         btnAnswer.setOnMouseClicked(ActionEvent -> {
             RadioButton selectedRadio = (RadioButton) variants.getSelectedToggle();
+            questionNumber++;
 
             if (selectedRadio != null) {
                 String toggleGroupValue = selectedRadio.getText();
@@ -174,6 +176,8 @@ public class TestStartedController implements Initializable {
                 nowQuestion++;
                 variantsIndex += 4;
 
+                countLabel.setText(questionNumber + "/" + finalCount);
+                numberOfQuestion.setText(questionNumber + " - savol");
                 questionLabel.setText(questionsList.get(nowQuestion));
                 variant1.setText(variantsList.get(variantsIndex));
                 variant2.setText(variantsList.get(variantsIndex + 1));
