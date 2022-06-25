@@ -3,6 +3,11 @@
     src: url('Fonts/Montserrat-SemiBold.ttf');
 }
 
+@font-face {
+    font-family: 'test2';
+    src: url('Fonts/Montserrat-SemiBold.ttf');
+}
+
 #homeIcon:hover {
     -fx-image: url("../../../images/hover-home-icon.png");
 }
@@ -11,29 +16,11 @@
     -fx-image: url("../../../images/hover-home-icon.png");
 }
 
-#aboutIcon {
-    -fx-image: url("../../../images/about-icon.png");
-}
-
-#aboutIcon:hover {
-    -fx-image: url("../../../images/hover-about-icon.png");
-}
-
-#settingsIcon {
-    -fx-image: url("../../../images/settings-icon.png");
-}
-
-#settingsIcon:hover {
-    -fx-image: url("../../../images/hover-settings-icon.png");
-}
-
 #title {
     -fx-font-family: "Montserrat SemiBold";
 }
 
 #addTestButton {
     -fx-font-family: "Montserrat SemiBold";
-    -fx-font-size: 16px;
+    -fx-font-size: 18px;
 }
-
-

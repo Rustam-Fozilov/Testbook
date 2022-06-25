@@ -29,7 +29,7 @@
                   <Insets bottom="25.0" />
                </VBox.margin>
             </Rectangle>
-            <ImageView fx:id="aboutIcon" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="aboutIcon" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#goToInfo" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/about-icon.png" />
                </image>
